@@ -263,7 +263,7 @@ Once you have your off-chain resolver ready and tested run `yarn deploy`.
 
 Your off-chain resolver is now pinned on ipfs with the hash e.g. `Qmd77yP8rEcjoMqzCpKJwU8DK1aApDZh5wjD7sn8gJw8cw`
 
-## Creating off-chain resolver task on Gelato Ops
+## Creating off-chain resolver task
 
 Fill up the necessary parameters in `src/srcipts/createTask.ts`
 
