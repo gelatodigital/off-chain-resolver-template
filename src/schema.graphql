@@ -1,0 +1,27 @@
+#import * into Ethereum from "wrap://ens/ethereum.polywrap.eth"
+#import * into Graph from "wrap://ens/graph-node.polywrap.eth"
+#import * into Logger from "wrap://ens/js-logger.polywrap.eth"
+#import * into Http from "wrap://ens/http.polywrap.eth"
+#import * into Time from "wrap://ens/datetime.polywrap.eth"
+
+type Module {
+  checker(
+    connection: Ethereum_Connection
+    userArgsBuffer: Bytes!
+    gelatoArgsBuffer: Bytes!
+  ): CheckerResult!
+}
+
+type CheckerResult {
+  canExec: Boolean!
+  execData: String!
+}
+
+"""
+Only modify "UserArgs"
+"""
+type UserArgs {}
+
+type GelatoArgs {
+  gasPrice: BigInt!
+}
