@@ -1,4 +1,4 @@
-# Gelato off-chain resolver template (BETA)
+# (BETA) Gelato Off-chain Resolver Template
 
 Off-chain resolver enables you to automate smart contract function calls based on off-chain conditions.
 
@@ -280,5 +280,5 @@ Since this feature is still in BETA, please reach out to us with your EOA addres
 
 ## Off-chain resolver examples
 
-You can find more examples of off-chain resolver in this [repo]()
+You can find more examples of off-chain resolver in this [repo](https://github.com/gelatodigital/offchain-resolver-examples)
 .
