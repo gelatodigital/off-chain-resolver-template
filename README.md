@@ -280,5 +280,5 @@ Since this feature is still in BETA, please reach out to us with your EOA addres
 
 ## Off-chain resolver examples
 
-You can find more examples of off-chain resolver in this [repo](https://github.com/gelatodigital/offchain-resolver-examples)
+You can find more examples of off-chain resolver in this [repo](https://github.com/gelatodigital/off-chain-resolver-examples)
 .
