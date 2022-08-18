@@ -150,12 +150,12 @@ Logger_Module.log({
 });
 ```
 
-- Time_Module: get `Date.now()`. Returns current epoch timestamp in milliseconds.
+- Time_Module: get `Date.now()`. Returns current epoch timestamp in seconds.
 
 ```typescript
 import { Time_Module } from "./wrap";
 
-let timeNowMs = Time_Module.currentTimestamp({}).unwrap();
+let timeNowSec = Time_Module.currentTimestamp({}).unwrap();
 ```
 
 #### **Handling objects**

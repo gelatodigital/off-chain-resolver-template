@@ -5649,10 +5649,10 @@ pluralize@^8.0.0:
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-8.0.0.tgz#1a6fa16a38d12a1901e0320fa017051c539ce3b1"
   integrity sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==
 
-polywrap-datetime-plugin@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/polywrap-datetime-plugin/-/polywrap-datetime-plugin-0.3.0.tgz#f3eff9419b9c86f8eafc4dcf340bf1607732f73d"
-  integrity sha512-uxNQghOyWAHxZPDEPVNKYX4JOjY5y/YfRSZ5pxLy/lIDhylBApQO2J57HPmJ28MD/KOl4xNn1b0Q3QRDbNlJ3g==
+polywrap-datetime-plugin@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/polywrap-datetime-plugin/-/polywrap-datetime-plugin-0.3.1.tgz#a518a782e5e93d95dcc44075bcd0a1426a757b6e"
+  integrity sha512-qC+bo97LrUsYXe4WwlIot0lhZB/JebRQXtbC0TzJwstQTeT0KOkM0zb5t2hut1iOzOK/lyle/z7ASwTShH/Lhw==
   dependencies:
     "@polywrap/core-js" "^0.3.0"
 

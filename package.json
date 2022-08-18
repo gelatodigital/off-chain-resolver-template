@@ -39,6 +39,6 @@
   },
   "dependencies": {
     "@polywrap/wasm-as": "0.3.0",
-    "polywrap-datetime-plugin": "^0.3.0"
+    "polywrap-datetime-plugin": "^0.3.1"
   }
 }
