@@ -6,7 +6,6 @@
   "scripts": {
     "codegen": "npx polywrap codegen",
     "build": "npx polywrap build",
-    "generate:contracts:typings": "yarn typechain --target=ethers-v5 --out-dir scripts/utils/types scripts/utils/abis/*.json",
     "test:env:up": "npx polywrap infra up --modules=eth-ens-ipfs",
     "test:env:down": "npx polywrap infra down --modules=eth-ens-ipfs",
     "deploy": "npx polywrap deploy",
@@ -24,8 +23,8 @@
     ]
   },
   "devDependencies": {
+    "@gelatonetwork/ops-sdk": "2.0.2-beta",
     "@msgpack/msgpack": "^2.7.2",
-    "@typechain/ethers-v5": "^10.1.0",
     "@types/jest": "27.0.3",
     "assemblyscript": "0.19.1",
     "dotenv": "^16.0.1",
@@ -34,7 +33,6 @@
     "polywrap": "0.3.0",
     "ts-jest": "26.5.4",
     "ts-node": "^10.9.1",
-    "typechain": "^8.1.0",
     "typescript": "^4.7.4"
   },
   "dependencies": {

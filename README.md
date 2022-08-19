@@ -268,10 +268,11 @@ Your off-chain resolver is now pinned on ipfs with the hash e.g. `Qmd77yP8rEcjoM
 Fill up the necessary parameters in `src/srcipts/createTask.ts`
 
 ```typescript
+const taskName = "";
 const execAddress = "";
-const execDataOrSelector = "";
-const userArgs = {};
+const execSelector = "";
 const offChainResolverHash = "";
+const offChainResolverArgs = {};
 ```
 
 `yarn createTask` to create the off-chain resolver task.
