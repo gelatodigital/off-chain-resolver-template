@@ -35,7 +35,7 @@ RPC_URL= // required for testing / task creation
 
 ## Creating off-chain resolver
 
-### 1. Define schema for checker arguments
+### 1. Define schema for checker arguments (optional)
 
 In `src/schema.graphql` define the arguments which will be passed into `checker()`. Do not modify other types.
 
