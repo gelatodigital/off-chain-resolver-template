@@ -68,9 +68,10 @@ let count = userArgs.count;
 let counterAddress = userArgs.counterAddress;
 
 let gasPrice = gelatoArgs.gasPrice;
+let timeStamp = gelatoArgs.timeStamp;
 ```
 
-Gelato passes `gasPrice` as an argument as well. This can be helpful in estimating the transaction fee of the execution or limit executions to certain `gasPrice`.
+Gelato passes `gasPrice` & `timeStamp` as an argument as well. `gasPrice` can be helpful in estimating the transaction fee of the execution or limit executions to certain `gasPrice`.
 
 #### **Using Modules**
 
@@ -80,7 +81,6 @@ import {
   Graph_Module,
   Http_Module,
   Logger_Module,
-  Time_Module,
 } from "./wrap";
 ```
 
@@ -148,14 +148,6 @@ Logger_Module.log({
   level: Logger_Logger_LogLevel.INFO,
   message: "Hello world",
 });
-```
-
-- Time_Module: get `Date.now()`. Returns current epoch timestamp in seconds.
-
-```typescript
-import { Time_Module } from "./wrap";
-
-let timeNowSec = Time_Module.currentTimestamp({}).unwrap();
 ```
 
 #### **Handling objects**

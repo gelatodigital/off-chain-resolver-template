@@ -2,7 +2,6 @@
 #import * into Graph from "wrap://ens/graph-node.polywrap.eth"
 #import * into Logger from "wrap://ens/js-logger.polywrap.eth"
 #import * into Http from "wrap://ens/http.polywrap.eth"
-#import * into Time from "wrap://ens/datetime.polywrap.eth"
 
 type Module {
   checker(
@@ -24,4 +23,5 @@ type UserArgs {}
 
 type GelatoArgs {
   gasPrice: BigInt!
+  timeStamp: BigInt!
 }
