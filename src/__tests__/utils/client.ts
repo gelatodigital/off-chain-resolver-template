@@ -1,7 +1,6 @@
 import "dotenv/config";
 import { PolywrapClient } from "@polywrap/client-js";
 import { ethereumPlugin } from "@polywrap/ethereum-plugin-js";
-import { dateTimePlugin } from "polywrap-datetime-plugin";
 
 const env = process.env;
 
@@ -18,10 +17,6 @@ const polywrapClient = new PolywrapClient({
         },
         defaultNetwork: chain,
       }),
-    },
-    {
-      uri: "ens/datetime.polywrap.eth",
-      plugin: dateTimePlugin({}),
     },
   ],
 });
