@@ -19,7 +19,7 @@ Off-chain resolver enables you to automate smart contract function calls based o
 
 ## Install dependencies
 
-- `nvm install && nvm use`
+- `npm install && npm use`
 
 - `yarn install`
 
