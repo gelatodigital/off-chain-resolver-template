@@ -23,6 +23,8 @@ Off-chain resolver enables you to automate smart contract function calls based o
 
 - `yarn install`
 
+- have `docker` running
+
 ## Env variables
 
 Create a `.env` file with your private config.
