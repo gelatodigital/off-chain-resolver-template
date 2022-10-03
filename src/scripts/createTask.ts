@@ -29,6 +29,7 @@ const main = async () => {
     execSelector,
     offChainResolverHash,
     offChainResolverArgs,
+    dedicatedMsgSender: true,
   });
 
   console.log("tx: ", res.tx);

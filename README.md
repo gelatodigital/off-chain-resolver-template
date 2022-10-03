@@ -171,7 +171,8 @@ let resObj = <JSON.Obj>JSON.parse(resString);
 
 // accessing value of "value"
 let valueJson = quoteResObj.getValue("value");
-if (!valueJson) throw Error("No valueJson");
+if (!valueJson)
+  return { canExec: false, execData: encodeMessage("No valueJson") };
 let valueString = valueJson.toString();
 
 let valueBigInt = BigInt.fromString(valueString);
@@ -191,10 +192,11 @@ let resObj = swapResObj.getObj("resString");
 
 // accessing value of "gasPrice"
 let gasObj = swapResObj.getObj("gas");
-if (!gasObj) throw Error("No gasObj");
+if (!gasObj) return { canExec: false, execData: encodeMessage("No gasObj") };
 
 let gasPriceJson = gasObj.getValue("gasPrice");
-if (!gasPriceJson) throw Error("No gasPriceJson");
+if (!gasPriceJson)
+  return { canExec: false, execData: encodeMessage("No gasPriceJson") };
 let gasPriceString = gasPriceJson.toString();
 
 let gasPriceBigInt = BigInt.fromString(gasPriceString);
@@ -207,10 +209,14 @@ To get information about why your task isn't executing after you have created yo
 This message will be returned and shown on the Gelato Ops task page whenever Gelato calls your off-chain resolver.
 
 ```typescript
-let execData = Ethereum_Module.solidityPack({
-  types: ["string"],
-  values: ["Time not elapsed"],
-}).unwrap();
+function encodeMessage(msg: string): string {
+  return Ethereum_Module.solidityPack({
+    types: ["string"],
+    values: [msg],
+  }).unwrap();
+}
+
+let execData = encodeMessage("Time not elapsed");
 
 return { canExec: false, execData };
 ```

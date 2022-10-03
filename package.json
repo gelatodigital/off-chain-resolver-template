@@ -23,7 +23,7 @@
     ]
   },
   "devDependencies": {
-    "@gelatonetwork/ops-sdk": "2.0.6-beta",
+    "@gelatonetwork/ops-sdk": "2.0.7-beta",
     "@msgpack/msgpack": "^2.7.2",
     "@types/jest": "27.0.3",
     "assemblyscript": "0.19.1",
