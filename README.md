@@ -12,6 +12,7 @@ Off-chain resolver enables you to automate smart contract function calls based o
     - [Using modules](#using-modules)
     - [Handling objects](#handling-objects)
     - [Debug message](#returning-debug-message)
+- [Compiling off-chain resolver](#compiling-off-chain-resolver)
 - [Testing off-chain resolver](#testing-off-chain-resolver)
 - [Deploying off-chain resolver](#deploying-off-chain-resolver)
 - [Creating off-chain resolver task](#creating-off-chain-resolver-task)
@@ -39,7 +40,7 @@ RPC_URL= // required for testing / task creation
 
 ### 1. Define schema for checker arguments (optional)
 
-In `src/schema.graphql` define the arguments which will be passed into `checker()`. Do not modify other types.
+In `src/schema.graphql` define the arguments which will be passed into `checker()`. These arguments will be submitted on-chain when you create your task. Make sure to not include private information.
 
 ```typescript
 type UserArgs {
@@ -202,6 +203,18 @@ let gasPriceString = gasPriceJson.toString();
 let gasPriceBigInt = BigInt.fromString(gasPriceString);
 ```
 
+To access arrays in object:
+
+```typescript
+let addressesString =
+  '{"addresses":["0x0000000000000000000000000000000000000000","0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE","0x15b7c0c907e4c6b9adaaaabc300c08991d6cea05"]}';
+
+let addressesObj = <JSON.Obj>JSON.parse(addressesString);
+let addresses = (<JSON.Arr>addressesObj.getArr("addresses")).valueOf();
+
+let zeroAddress = addresses[0];
+```
+
 #### **Returning debug message**
 
 To get information about why your task isn't executing after you have created your task, you can return encoded string messages in `execData`.
@@ -220,6 +233,10 @@ let execData = encodeMessage("Time not elapsed");
 
 return { canExec: false, execData };
 ```
+
+## Compiling off-chain resolver
+
+Make sure to have docker running and do `yarn build`.
 
 ## Testing off-chain resolver
 
